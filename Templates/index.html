@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Welcome to Flask APP</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static' , filename='style.css')}}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <h1 class="main-heading">This is my root page</h1>
+
+
+    <div class="form">
+            
+    <p>This is the welcome page of my App </p>
+    
+    <form class = "pure-form" method="POST" action="/">
+     <p class="owner"> SHIVAM'S BMI CALCULATOR </p>
+
+    <label class="label" for="username">Enter your weight :&nbsp;</label>
+    <input class="input" type="text" name="username" placeholder="in Kg's">
+
+    <label class="label "for="userfood">Enter your height:&nbsp;</label>
+    <input class="input" type="text" name="userfood" placeholder="in Cm's">
+      <div class="styled-button">
+    <button class="button" id="kunal" value="submit" type="submit" ><span class="text">Submit !</span></button>
+        <span class="border" id="kajal">Submit !</span>
+   </form>
+     
+  
+    </div>
+    <!--<button type="submit" class="pure-button pure-button-primary" value="submit">submit</button>-->
+
+    
+
+    
+
+<br>
+<br>    
+<div>
+    
+    {% if bmi %}
+        <p> Thanks for Using! Your BMI is</p>
+        <p>  {{ bmi }}! </p>
+
+    {% endif %}
+
+</div>
+    
+
+</body>
+</html>
